@@ -66,99 +66,38 @@
 			<header>
 				<h1>Scripting</h1>
 			</header>
-			<p>Content goes here...<p>
-			<pre><code class="language-css">@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700,600,800,300);
+			<p>
+				When starting to develop in JavaScript, you need to be able to debug (find your errors) in your code. A good way to do this is to log data a JavaScript console. This is also a good way to tell how far your code is executing before you get an error (so that you can easily find out where it's going bad). 
 
-body {
-	margin: 0;
-	padding: 0;
-	width: 100%;
-	height: auto;
+				All right, *now* we can get started... First within your <code>&lt;head>&lt;/head></code> tags, add script tags which should look something like this:
+			</p>
+			<pre><code class="language-markup">
+&lt;script>
 
-	display: flex;
-	display: -webkit-flex;
-	display: -mox-flex;
+&lt;/script></code></pre>
+			
+			<p>
+				Alright, sweet! We can now start putting content within these tags, and it will be executed! Luckily, it's not as hard as it may sound. In order to log data, we must untilize JavaScript's console object.
 
-	font-family: 'Open Sans', sans-serif;
-}
+				<ul>
+					<li>If you are using Google Chrome, press the menu button on the top right of your browser, select more tools, and then select Javascript Console. (<code>Menu > More Tools > Javascript Console</code>)</li>
+					<li>If you are using Mozilla Firefox, press the menu button on the top right of your browser, select Developer, and then select Browser Console. (<code>Menu > Developer > Browser Console</code>)</li>
+					<li>If you are using Internet Explorer... There is no solution for you (kidding, but IE is a horrible browser), use either of the two browsers listed above.</li>
+				</ul>
 
-aside {
-	box-sizing: border-box;
-	min-width: 300px;
-	background-color: #27ae60;
-	color: #fff;
-}
-
-aside header {
-	width: auto;
-	text-align:center;
-	text-transform: uppercase;
-	padding-top: 80px;
-}
-
-aside header .logo {
-	max-width: 75px;
-	height: auto;
-	margin: 0 auto;
-}
-
-aside header h2 {
-
-}
-
-aside header h4 {
-	margin-top: -20px;
-}
-
-nav {
-	margin-top: 80px;
-}
-
-nav ul {
-	list-style: none;
-	-webkit-padding-start: 0px;
-	-webkit-margin-before: 0em;
-	-webkit-margin-after: 0em;
-	-webkit-margin-start: 0px;
-	-webkit-margin-end: 0px;
-}
-
-nav ul li a {
-	width: 100%;
-	height: 30px;
-	display: block;
-	background-color: none;
-	text-transform: uppercase;
-	text-decoration: none;
-	color: #fff;
-}
-
-nav ul li a:hover {
-	background-color: #2ecc71;
-	color: #fff;
-}
-
-nav ul li a span {
-	padding-top: 4px;
-	padding-left: 20px;
-  	display: inherit;
-}
-
-nav ul li li a span {
-	padding-top: 4px;
-	padding-left: 40px;
-  	display: inherit;
-}
-
-main {
-	background-color: #ecf0f1;
-	width: 100%;
-	padding-left: 40px;
-}
-
-main header {
-	text-transform: uppercase;
-}</code></pre>
+				By utilizing this object, we have access to four different logging methods, and they are <code>info, error, warn, log</code>. There are many more, but they will not be covered in the scope of this tutorial. So, now that we know these different methods, let's <strong>actually</strong> log <code>This page has been loaded...</code> in the console when the page is loaded. We can do this by calling the <code>console.log</code> method. It should look something like this:
+				> Note, this information should go within the <code><script></script></code> tags.
+			</p>
+			<pre><code class="language-javascript">console.log('This page has been loaded...');</code></pre>
+			<p>
+				Alright, now let's go ahead and view this page in the browser and open up the console in your brower.
+			</p>
+				
+				<img src="http://blog.tjyouschak.me/content/images/2015/04/console.PNG" alt="Console Log" />
+				
+			<p>
+				If you see a log that looks similar to this one, you may continue on. If you don't see something similar to the console displayed above, please go back and check your code. Also, it is important to note that you can see the file and the line on which where the the code was executed, in this case the code executed on <code>line 12</code>, for you this may be different.
+			</p>
 		</main>
 		<script src="prism.js"></script>
 	</body>
