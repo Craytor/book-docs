@@ -100,6 +100,14 @@ main header {
 	text-transform: uppercase;
 }
 
+blockquote {
+	border-left: 4px solid #3498db;
+	padding-left: 5px;
+	margin: 0;
+	border-top-left-radius: 4px;
+	border-bottom-left-radius: 4px;
+}
+
 .social-links {
   	position: absolute;
   	bottom: 0;

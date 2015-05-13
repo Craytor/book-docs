@@ -64,101 +64,55 @@
 		</aside>
 		<main>
 			<header>
-				<h1>Scripting</h1>
+				<h1>Displaying Variables (their content)</h1>
 			</header>
-			<p>Content goes here...<p>
-			<pre><code class="language-css">@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700,600,800,300);
+			<p>
+				Now, this is most likely the moment you have been waiting for! So just how do you display that variable on your webpage? Well let's take a look!
+			</p>
+			<blockquote>
+				This will require <strong>both</strong> HTML and JavaScript for your results to work as planned.
+			</blockquote>
+			<p>
 
-body {
-	margin: 0;
-	padding: 0;
-	width: 100%;
-	height: auto;
+				So by using JavaScript, we could select the whole page and replace it's content with what we specify, but that isn't feasible in a real-world application. Instead we will go ahead and get the content of a div, and replace the contents of it with what ever our variable is. Ready?
+				<br />
+				<br />
+				Let's enter the following onto our site (remove existing body tags and add the following).
+			</p>
+			<pre><code class="language-markup">&lt;body onload="loaded()">
+	&lt;div id="content">&lt;/div>
+&lt;/body>
+</code></pre>
+			<p>
 
-	display: flex;
-	display: -webkit-flex;
-	display: -mox-flex;
-
-	font-family: 'Open Sans', sans-serif;
+				Notice how we have an onload event attribute. All this means is once the body loads, it will then run the function in JavaScript. Don't know what a function is? That's fine... It's coming up!
+				<br />
+				<br />
+				Now within JavaScript, we can now select the <code>content</code> div and do our fancy stuff! Let's take a look... Notice how we have the <code>loaded()</code> function - all it does is holds content and can be called, and once called, the code is then exectued. We will learn more about functions later on.
+			</p>
+			<pre><code class="language-javascript">function loaded() {
+    var hello = "Hello world!";
+    document.getElementById("content").innerHTML = hello;
 }
+</code></pre>
+				<p>
+					Here's a look at what you may see on your page (i.e. depending what you set your hello variable to).
+				</p>
+				<img src="http://blog.tjyouschak.me/content/images/2015/04/hello_world-.PNG" alt ="hello world" />
+				<p>
+					Now, before we go any further, let's try one more thing!
+					<br />
+					<br />
+					Let's go back up into our <code>loaded()</code> function and take a look at that variable we set. Let's actually change the content of "Hello world" to somthing with <strong>HTML</strong>! Yes, we can even include HTML tags within the variable. Alright, so let's put "Hello world!" in a bold tag within a paragraph tag. This is what our variable should look like now:
+				</p>
+				
+				<pre><code class="language-javascript">var hello = "&lt;p>&lt;b>Hello world!&lt;/b>&lt;/p>";</code></pre>
 
-aside {
-	box-sizing: border-box;
-	min-width: 300px;
-	background-color: #27ae60;
-	color: #fff;
-}
-
-aside header {
-	width: auto;
-	text-align:center;
-	text-transform: uppercase;
-	padding-top: 80px;
-}
-
-aside header .logo {
-	max-width: 75px;
-	height: auto;
-	margin: 0 auto;
-}
-
-aside header h2 {
-
-}
-
-aside header h4 {
-	margin-top: -20px;
-}
-
-nav {
-	margin-top: 80px;
-}
-
-nav ul {
-	list-style: none;
-	-webkit-padding-start: 0px;
-	-webkit-margin-before: 0em;
-	-webkit-margin-after: 0em;
-	-webkit-margin-start: 0px;
-	-webkit-margin-end: 0px;
-}
-
-nav ul li a {
-	width: 100%;
-	height: 30px;
-	display: block;
-	background-color: none;
-	text-transform: uppercase;
-	text-decoration: none;
-	color: #fff;
-}
-
-nav ul li a:hover {
-	background-color: #2ecc71;
-	color: #fff;
-}
-
-nav ul li a span {
-	padding-top: 4px;
-	padding-left: 20px;
-  	display: inherit;
-}
-
-nav ul li li a span {
-	padding-top: 4px;
-	padding-left: 40px;
-  	display: inherit;
-}
-
-main {
-	background-color: #ecf0f1;
-	width: 100%;
-	padding-left: 40px;
-}
-
-main header {
-	text-transform: uppercase;
-}</code></pre>
+				<p>
+				By utilizing the document object we can use the <code>getElementById</code> function, and therefore can select the contents of the div and replace it all with the variable <code>hello</code>. Here's a look:
+				</p>
+				<img src="http://blog.tjyouschak.me/content/images/2015/04/Screenshot-2015-04-22-at-11-09-06-AM.png" alt="code" />
+			</p>
 		</main>
 		<script src="prism.js"></script>
 	</body>

@@ -66,99 +66,73 @@
 			<header>
 				<h1>Scripting</h1>
 			</header>
-			<p>Content goes here...<p>
-			<pre><code class="language-css">@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700,600,800,300);
+			<p>
+				You can do many things with variables, the outcome is unlimited! Another thing that may come in handy is to add (numerical) variables together. Let's take a look:
+			</p>
+			<h3>Addition</h3>
+			<p>
+				Let's say that you have a $5.00 bill, $10.00 bill, $20.00 bill, and a $50.00 bill - how much money do you have in total? Let's go ahead and solve this:
+			</p>
+			<pre><code class="language-javascript">var total = 5 + 10 + 20 + 50;
+console.log(total);
+			</code></pre>
+			<img src="http://blog.tjyouschak.me/content/images/2015/04/Screenshot-2015-04-22-at-11-12-56-AM.png" alt="addition" />
 
-body {
-	margin: 0;
-	padding: 0;
-	width: 100%;
-	height: auto;
+			<h3>Subtraction</h3>
+			<p>
+				So using the total from above, you go and buy yourself a meal at Sheetz. You buy a 3 piece chicken, a bucket of Fryz, and a large fountain soda - the total comes to $8.54. How much money do you have left?
+			</p>
+			<pre><code class="language-javascript">var total = 130;  // get this from the problem before
+var cost = 8.54;
+var amount = total - cost;
+console.log(amount);
+</code></pre>
+			<p>
+				Now, once you run this, you <strong>should</strong> see something similar to this:
+			</p>
+			<img src="http://blog.tjyouschak.me/content/images/2015/04/subtraction.PNG" alt="subtraction" />
 
-	display: flex;
-	display: -webkit-flex;
-	display: -mox-flex;
+			<h3>Multipication</h3>
+			<p>
+				So, what if you wanted to calculate the area of a rectangle - maybe this is the banner on your website. Well - we can do that! Let's say that dimensions of the banner are <code>900px x 300px</code>, we can do the following: 
+			</p>
+			<pre><code class="language-javascript">var width = 900;
+var height = 300;
 
-	font-family: 'Open Sans', sans-serif;
-}
+var area = width * height;
+console.log(area + " square pixles");
+</code></pre>
+			<p>
+				Alright, once you run this, take a look in the console... We should see something like this:
+			</p>
+			<img src="http://blog.tjyouschak.me/content/images/2015/04/multiplication-1.PNG" alt="multiplication" />
 
-aside {
-	box-sizing: border-box;
-	min-width: 300px;
-	background-color: #27ae60;
-	color: #fff;
-}
+			<h3>Division</h3>
+			<p>
+				Multiplication's pretty cool, 'ey? So let's do something even <strong>cooler</strong>! Let's divide, but don't worry, you don't have to be an expert in math to get this one down. So, for this example, let's use another math problem. 
+			</p>
+			<blockquote>
+				This problem is a little bit more advanced. A simple way of division is <code>var1/var2</code>.
+			</blockquote>
+			<p>
+				Suppose a flagpole's shadow is 25 feet long, and a person is standing next to it. The person is 5 feet high, and casts a 3 foot shadow. How high is the flagpole?
+				<br />
+				<br />
+				Alright, so let's consult this as if it was a math problem. We are going to have to make two porportions. One proportion is <code>x/25</code> (for the flagpole) while the other proportion is going to be  <code>5/3</code>. Now in math we would cross multiply and set each side equal to one another - so let's do that.
+			</p>
+			<pre><code class="language-css">
+// note these are the sides of the equation after cross multiplication...
 
-aside header {
-	width: auto;
-	text-align:center;
-	text-transform: uppercase;
-	padding-top: 80px;
-}
+var flagpole = 125;
+var person = 3; // it's suppose to be 3x, let's remove the x, JavaScript isn't that smart
 
-aside header .logo {
-	max-width: 75px;
-	height: auto;
-	margin: 0 auto;
-}
-
-aside header h2 {
-
-}
-
-aside header h4 {
-	margin-top: -20px;
-}
-
-nav {
-	margin-top: 80px;
-}
-
-nav ul {
-	list-style: none;
-	-webkit-padding-start: 0px;
-	-webkit-margin-before: 0em;
-	-webkit-margin-after: 0em;
-	-webkit-margin-start: 0px;
-	-webkit-margin-end: 0px;
-}
-
-nav ul li a {
-	width: 100%;
-	height: 30px;
-	display: block;
-	background-color: none;
-	text-transform: uppercase;
-	text-decoration: none;
-	color: #fff;
-}
-
-nav ul li a:hover {
-	background-color: #2ecc71;
-	color: #fff;
-}
-
-nav ul li a span {
-	padding-top: 4px;
-	padding-left: 20px;
-  	display: inherit;
-}
-
-nav ul li li a span {
-	padding-top: 4px;
-	padding-left: 40px;
-  	display: inherit;
-}
-
-main {
-	background-color: #ecf0f1;
-	width: 100%;
-	padding-left: 40px;
-}
-
-main header {
-	text-transform: uppercase;
-}</code></pre>
+var flagpole_height = flagpole / person;
+console.log('x = ' + flagpole_height + ' feet');
+</code></pre>
+			<p>
+				Again, we should get some groovy response similar to this:
+			</p>
+			<img src="http://blog.tjyouschak.me/content/images/2015/04/division.PNG" alt="division" />
 		</main>
 		<script src="prism.js"></script>
 	</body>
