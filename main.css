@@ -1,5 +1,8 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700,600,800,300);
 
+/*------------------------*/
+/*     Default Style      */
+/*------------------------*/
 html {
 	height: 100%;
 	margin: 0;
@@ -20,11 +23,19 @@ body {
 	font-family: 'Open Sans', sans-serif;
 }
 
+
+/*------------------------*/
+/*     Sidebar Style      */
+/*------------------------*/
 aside {
 	box-sizing: border-box;
+	-webkit-flex-direction: column;
 	min-width: 300px;
 	background-color: #27ae60;
 	color: #fff;
+
+	position: fixed;
+	height: 100%;
 }
 
 aside header {
@@ -48,6 +59,10 @@ aside header h4 {
 	margin-top: -20px;
 }
 
+/*------------------------*/
+/*     Navbar  Style      */
+/*------------------------*/
+
 nav {
 	margin-top: 80px;
 }
@@ -59,13 +74,17 @@ nav ul {
 	-webkit-margin-after: 0em;
 	-webkit-margin-start: 0px;
 	-webkit-margin-end: 0px;
+	-moz-padding-start: 0px;
+	-moz-margin-before: 0em;
+	-moz-margin-after: 0em;
+	-moz-margin-start: 0px;
+	-moz-margin-end: 0px;
 }
 
 nav ul li a {
 	width: 100%;
 	height: 30px;
 	display: block;
-	background-color: none;
 	text-transform: uppercase;
 	text-decoration: none;
 	color: #fff;
@@ -88,25 +107,9 @@ nav ul li li a span {
   	display: inherit;
 }
 
-main {
-	background-color: #ecf0f1;
-	width: 100%;
-	padding-left: 40px;
-  	padding-right: 40px;
-  	line-height: 25px;
-}
-
-main header {
-	text-transform: uppercase;
-}
-
-blockquote {
-	border-left: 4px solid #3498db;
-	padding-left: 5px;
-	margin: 0;
-	border-top-left-radius: 4px;
-	border-bottom-left-radius: 4px;
-}
+/*------------------------*/
+/*   Social Link Style    */
+/*------------------------*/
 
 .social-links {
   	position: absolute;
@@ -138,3 +141,30 @@ blockquote {
 .social-links a:hover {
 	color: #bdc3c7;
 }
+
+
+/*------------------------*/
+/*   Main Content Style   */
+/*------------------------*/
+main {
+	background-color: #ecf0f1;
+	width: calc(100% - 400px);
+	padding-left: 40px;
+  	padding-right: 40px;
+  	line-height: 25px;
+  	right:0;
+  	position:absolute;
+}
+
+main header {
+	text-transform: uppercase;
+}
+
+blockquote {
+	border-left: 4px solid #3498db;
+	padding-left: 5px;
+	margin: 0;
+	border-top-left-radius: 4px;
+	border-bottom-left-radius: 4px;
+}
+

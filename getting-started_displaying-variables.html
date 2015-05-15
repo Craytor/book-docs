@@ -10,12 +10,15 @@
 		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 	</head>
 	<body>
+		<!-- sidebar -->
 		<aside>
+			<!-- header -->
 			<header>
 				<img src="js-logo.png" class="logo" alt="logo" />
 				<h2>javascript</h2>
 				<h4>- tutorial - </h4>
 			</header>
+			<!-- navigation -->
 			<nav>
 				<ul>
 					<li>
@@ -51,6 +54,7 @@
 					</li>
 				</ul>
 			</nav>
+			<!-- social links -->
 			<div class="social-links">
 				<ul>
 					<li>
@@ -62,27 +66,37 @@
 				</ul>
 			</div>
 		</aside>
+
+		<!-- main content on right -->
 		<main>
+			<!-- header -->
 			<header>
 				<h1>Displaying Variables (their content)</h1>
 			</header>
+
+			<!-- content -->
 			<p>
 				Now, this is most likely the moment you have been waiting for! So just how do you display that variable on your webpage? Well let's take a look!
 			</p>
+
+			<!-- blockquote for callouts -->
 			<blockquote>
 				This will require <strong>both</strong> HTML and JavaScript for your results to work as planned.
 			</blockquote>
-			<p>
 
+			<p>
 				So by using JavaScript, we could select the whole page and replace it's content with what we specify, but that isn't feasible in a real-world application. Instead we will go ahead and get the content of a div, and replace the contents of it with what ever our variable is. Ready?
 				<br />
 				<br />
 				Let's enter the following onto our site (remove existing body tags and add the following).
 			</p>
+
+			<!-- code example -->
 			<pre><code class="language-markup">&lt;body onload="loaded()">
 	&lt;div id="content">&lt;/div>
 &lt;/body>
 </code></pre>
+
 			<p>
 
 				Notice how we have an onload event attribute. All this means is once the body loads, it will then run the function in JavaScript. Don't know what a function is? That's fine... It's coming up!
@@ -90,30 +104,36 @@
 				<br />
 				Now within JavaScript, we can now select the <code>content</code> div and do our fancy stuff! Let's take a look... Notice how we have the <code>loaded()</code> function - all it does is holds content and can be called, and once called, the code is then exectued. We will learn more about functions later on.
 			</p>
+
+			<!-- code example -->
 			<pre><code class="language-javascript">function loaded() {
     var hello = "Hello world!";
     document.getElementById("content").innerHTML = hello;
 }
 </code></pre>
-				<p>
-					Here's a look at what you may see on your page (i.e. depending what you set your hello variable to).
-				</p>
-				<img src="http://blog.tjyouschak.me/content/images/2015/04/hello_world-.PNG" alt ="hello world" />
-				<p>
-					Now, before we go any further, let's try one more thing!
-					<br />
-					<br />
-					Let's go back up into our <code>loaded()</code> function and take a look at that variable we set. Let's actually change the content of "Hello world" to somthing with <strong>HTML</strong>! Yes, we can even include HTML tags within the variable. Alright, so let's put "Hello world!" in a bold tag within a paragraph tag. This is what our variable should look like now:
-				</p>
-				
-				<pre><code class="language-javascript">var hello = "&lt;p>&lt;b>Hello world!&lt;/b>&lt;/p>";</code></pre>
 
-				<p>
-				By utilizing the document object we can use the <code>getElementById</code> function, and therefore can select the contents of the div and replace it all with the variable <code>hello</code>. Here's a look:
-				</p>
-				<img src="http://blog.tjyouschak.me/content/images/2015/04/Screenshot-2015-04-22-at-11-09-06-AM.png" alt="code" />
+			<p>
+				Here's a look at what you may see on your page (i.e. depending what you set your hello variable to).
 			</p>
+			<img src="http://blog.tjyouschak.me/content/images/2015/04/hello_world-.PNG" alt ="hello world" />
+			<p>
+				Now, before we go any further, let's try one more thing!
+				<br />
+				<br />
+				Let's go back up into our <code>loaded()</code> function and take a look at that variable we set. Let's actually change the content of "Hello world" to somthing with <strong>HTML</strong>! Yes, we can even include HTML tags within the variable. Alright, so let's put "Hello world!" in a bold tag within a paragraph tag. This is what our variable should look like now:
+			</p>
+
+
+			<!-- code example -->
+			<pre><code class="language-javascript">var hello = "&lt;p>&lt;b>Hello world!&lt;/b>&lt;/p>";</code></pre>
+
+			<p>
+				By utilizing the document object we can use the <code>getElementById</code> function, and therefore can select the contents of the div and replace it all with the variable <code>hello</code>. Here's a look:
+			</p>
+			<img src="http://blog.tjyouschak.me/content/images/2015/04/Screenshot-2015-04-22-at-11-09-06-AM.png" alt="code" />
 		</main>
+
+		<!-- load scripts -->
 		<script src="prism.js"></script>
 	</body>
 </html>

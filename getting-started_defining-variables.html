@@ -10,12 +10,15 @@
 		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 	</head>
 	<body>
+		<!-- sidebar -->
 		<aside>
+			<!-- header -->
 			<header>
 				<img src="js-logo.png" class="logo" alt="logo" />
 				<h2>javascript</h2>
 				<h4>- tutorial - </h4>
 			</header>
+			<!-- navigation -->
 			<nav>
 				<ul>
 					<li>
@@ -51,6 +54,7 @@
 					</li>
 				</ul>
 			</nav>
+			<!-- social links -->
 			<div class="social-links">
 				<ul>
 					<li>
@@ -62,40 +66,60 @@
 				</ul>
 			</div>
 		</aside>
+
+		<!-- main content on right -->
 		<main>
+			<!-- header -->
 			<header>
 				<h1>Defining Variables</h1>
 			</header>
+
+			<!-- content -->
 			<p>
 				Alright, now that we know how to log data in the console, we can take a look at variables. Varibles are like barcodes at stores; you scan them at the register, magic happens in the backend, and then, whoohla, you know the name and the price of the product. You can also set them equal to data such as strings or arrays. So how can we go about this, you may be asking, and the answer is quite simple. First we need to declare a variable and set it equal to something; in this case, we will set it equal to <code>Hello World!</code>. So let's take a look at what this may look like...
 				
 			</p>
+			<!-- code example -->
 			<pre><code class="language-javascript">var hello = "Hello World!";</code></pre>
+
 			<p>
 				So what's going on? First <code>var</code> is declaring that the contents that follows between the word <code>var</code> and the equals sign is the variable. Also note the the name of your variable (<code>hello</code>) <strong>may not contain spaces</strong>! The equals sign (<code>=</code>) is what is binding your data to your variable, and finally <code>"Hello World!"</code> is what the data is.
 			</p>
+
+			<!-- blockquote for callouts -->
 			<blockquote>
 				Note that the data has quotes around it, this is important if you are including words and/or phrases. For numbers you don't need quotes.
 			</blockquote>
 			<p>
 				Let's try setting a variable equal to a number as well...
 			</p>
+
+			<!-- code example -->
 			<pre><code class="language-javascript">var myNumber = 1;</code></pre>
+
 			<p>
 				Okay, now that we know how to declare the variables, how do we view the data? It's pretty simple, we can either log it in the console or insert into our web page. We are not at the point where we can insert the data in the web page (it's coming up later), so let's stick with logging via the console. So this is what it should look like:
 			</p>
+
+			<!-- code example -->
 			<pre><code class="language-javascript">console.log(hello);
 console.log(myNumber);</code></pre>
+
 			<p>
 
 				Here is what the console should look like:
 				
 			</p>
+
 			<img src="http://blog.tjyouschak.me/content/images/2015/04/2-1.PNG" alt="console" />
+
+			<!-- blockquote for callouts -->
 			<blockquote>
 				Note that you should insert the <code>console.log()</code> into your <code><script></script></code> tags along with your variables (<code>var myNumber = 1;</code> and <code>var hello = "Hello World!";</code>).
 			</blockquote>
 		</main>
+
+		<!-- load scripts -->
 		<script src="prism.js"></script>
 	</body>
 </html>

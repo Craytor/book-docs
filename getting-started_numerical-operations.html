@@ -10,12 +10,15 @@
 		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 	</head>
 	<body>
+		<!-- sidebar -->
 		<aside>
+			<!-- header -->
 			<header>
 				<img src="js-logo.png" class="logo" alt="logo" />
 				<h2>javascript</h2>
 				<h4>- tutorial - </h4>
 			</header>
+			<!-- navigation -->
 			<nav>
 				<ul>
 					<li>
@@ -51,6 +54,7 @@
 					</li>
 				</ul>
 			</nav>
+			<!-- social links -->
 			<div class="social-links">
 				<ul>
 					<li>
@@ -62,10 +66,15 @@
 				</ul>
 			</div>
 		</aside>
+
+		<!-- main content on right -->
 		<main>
+			<!-- header -->
 			<header>
 				<h1>Scripting</h1>
 			</header>
+
+			<!-- content -->
 			<p>
 				You can do many things with variables, the outcome is unlimited! Another thing that may come in handy is to add (numerical) variables together. Let's take a look:
 			</p>
@@ -73,20 +82,26 @@
 			<p>
 				Let's say that you have a $5.00 bill, $10.00 bill, $20.00 bill, and a $50.00 bill - how much money do you have in total? Let's go ahead and solve this:
 			</p>
+
+			<!-- code example -->
 			<pre><code class="language-javascript">var total = 5 + 10 + 20 + 50;
 console.log(total);
 			</code></pre>
+
 			<img src="http://blog.tjyouschak.me/content/images/2015/04/Screenshot-2015-04-22-at-11-12-56-AM.png" alt="addition" />
 
 			<h3>Subtraction</h3>
 			<p>
 				So using the total from above, you go and buy yourself a meal at Sheetz. You buy a 3 piece chicken, a bucket of Fryz, and a large fountain soda - the total comes to $8.54. How much money do you have left?
 			</p>
+
+			<!-- code example -->
 			<pre><code class="language-javascript">var total = 130;  // get this from the problem before
 var cost = 8.54;
 var amount = total - cost;
 console.log(amount);
 </code></pre>
+
 			<p>
 				Now, once you run this, you <strong>should</strong> see something similar to this:
 			</p>
@@ -96,12 +111,15 @@ console.log(amount);
 			<p>
 				So, what if you wanted to calculate the area of a rectangle - maybe this is the banner on your website. Well - we can do that! Let's say that dimensions of the banner are <code>900px x 300px</code>, we can do the following: 
 			</p>
+
+			<!-- code example -->
 			<pre><code class="language-javascript">var width = 900;
 var height = 300;
 
 var area = width * height;
 console.log(area + " square pixles");
 </code></pre>
+
 			<p>
 				Alright, once you run this, take a look in the console... We should see something like this:
 			</p>
@@ -111,15 +129,20 @@ console.log(area + " square pixles");
 			<p>
 				Multiplication's pretty cool, 'ey? So let's do something even <strong>cooler</strong>! Let's divide, but don't worry, you don't have to be an expert in math to get this one down. So, for this example, let's use another math problem. 
 			</p>
+
+			<!-- blockquote for callouts -->
 			<blockquote>
 				This problem is a little bit more advanced. A simple way of division is <code>var1/var2</code>.
 			</blockquote>
+			
 			<p>
 				Suppose a flagpole's shadow is 25 feet long, and a person is standing next to it. The person is 5 feet high, and casts a 3 foot shadow. How high is the flagpole?
 				<br />
 				<br />
 				Alright, so let's consult this as if it was a math problem. We are going to have to make two porportions. One proportion is <code>x/25</code> (for the flagpole) while the other proportion is going to be  <code>5/3</code>. Now in math we would cross multiply and set each side equal to one another - so let's do that.
 			</p>
+
+			<!-- code example -->
 			<pre><code class="language-javascript">
 // note these are the sides of the equation after cross multiplication...
 
@@ -129,11 +152,14 @@ var person = 3; // it's suppose to be 3x, let's remove the x, JavaScript isn't t
 var flagpole_height = flagpole / person;
 console.log('x = ' + flagpole_height + ' feet');
 </code></pre>
+
 			<p>
 				Again, we should get some groovy response similar to this:
 			</p>
 			<img src="http://blog.tjyouschak.me/content/images/2015/04/division.PNG" alt="division" />
 		</main>
+
+		<!-- load scripts -->
 		<script src="prism.js"></script>
 	</body>
 </html>
