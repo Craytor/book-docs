@@ -23,6 +23,11 @@ body {
 	font-family: 'Open Sans', sans-serif;
 }
 
+a {
+	color: #27ae60;
+	text-decoration: none;
+}
+
 
 /*------------------------*/
 /*     Sidebar Style      */
